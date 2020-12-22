@@ -13,3 +13,10 @@ Redux:
         兄弟之间组件传递数据： 共同的子元素或者父元素（大量的组件需要使用同一条数据）
         
     如果你不知道什么时候需要使用Redux，就是你不需要使用它，当你遇到解决不了的问题， 自然会想起Redux. 
+
+    redux 与 react-redux 的区别
+    redux: js的状态管理 createStore
+    react-redux: 为了在react中容易地使用: connect provider
+
+    1.安装
+        npm install redux --save  // 简写: npm i redux
