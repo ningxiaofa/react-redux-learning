@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { createStore } from "redux";
 import reducer from './reducers/counter';
+import { Provider } from "react-redux";
+
+// Learning useState with object
+// import UseStateObj from './components/useStateObj';
 
 // 创建Store仓库
 const store = createStore(reducer);
@@ -11,21 +15,29 @@ const store = createStore(reducer);
 //   console.log("state: ", store.getState());
 // });
 
-const render = () => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <App 
-        onIncrement={() => {store.dispatch({type: "INCREMENT"})}}
-        onDecrement={() => {store.dispatch({type: "DECREMENT"})}}
-        value={store.getState()}
-      />
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-}
+// const render = () => {
+//   ReactDOM.render(
+//     <React.StrictMode>
+//       <App 
+//         onIncrement={() => {store.dispatch({type: "INCREMENT"})}}
+//         onDecrement={() => {store.dispatch({type: "DECREMENT"})}}
+//         counter={store.getState()}
+//       />
+//     </React.StrictMode>,
+//     document.getElementById('root')
+//   );
+// }
 
-// 第一次加载渲染
-render();
+// // 第一次加载渲染
+// render();
 
-// 监听数据变化, 重新渲染
-store.subscribe(render);
+// // 监听数据变化, 重新渲染
+// store.subscribe(render);
+
+
+ReactDOM.render(
+  <Provider store={ store }>
+    <App />
+    {/* <UseStateObj /> */}
+  </Provider>,
+  document.getElementById('root'));
