@@ -1,11 +1,15 @@
-export function increment() {
+import * as acitons from "../constants"
+
+export function increment(num) {
     return {
-        type: "INCREMENT"
+        type: acitons.INCREMENT,
+        num
     }
 }
 
-export function decrement() {
+export function decrement(num) {
     return {
-        type: "DECREMENT"
+        type: acitons.DECREMENT,
+        num
     }
 }
