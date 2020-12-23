@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createStore } from "redux";
-import reducer from './reducers/counter';
+// import reducer from './reducers/counter';
+// 改进 5-1
+import rootReducer from "./reducers"
 import { Provider } from "react-redux";
+
+
 
 // Learning useState with object
 // import UseStateObj from './components/useStateObj';
 
 // 创建Store仓库
-const store = createStore(reducer);
+// const store = createStore(reducer);
+// 改进 5-2
+const store = createStore(rootReducer);
 // 监听store数据变化
 // store.subscribe(() => {
 //   console.log("state: ", store.getState());
