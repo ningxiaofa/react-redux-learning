@@ -11,7 +11,7 @@ import User from './components/user'
 class App extends React.Component {
   render(){
     // console.log(this.state); // null
-    console.log("this.props: ", this.props); // 不知道怎么使用，就打印出来
+    // console.log("this.props: ", this.props); // 不知道怎么使用，就打印出来
     return (
       // 这里使用到 bootstrap 进行页面的布局, 也只是为了测试学习.
       <div className="container">
