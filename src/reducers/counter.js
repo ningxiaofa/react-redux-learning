@@ -1,7 +1,7 @@
 import * as acitons from "../constants"
 
 const counter = (state = 0, action) => {
-    switch(action.type){
+    switch (action.type) {
         case acitons.INCREMENT:
             // 认为制造错误异常
             // throw new Error("error reducer")

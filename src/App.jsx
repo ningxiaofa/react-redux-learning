@@ -23,7 +23,13 @@ class App extends React.Component {
           {/* <button className="btn btn-primary" onClick={() => {this.props.increment()}}>Increment</button>
           <button className="btn btn-success" onClick={() => {this.props.decrement()}}>Decrement</button> */}
           {/* 优化写法-4-2 */}
-          <button className="btn btn-primary" onClick={() => {this.props.counterActions.increment(10)}}>Increment</button>
+          <button className="btn btn-primary" onClick={() => {
+            this.props.counterActions.increment(10)
+            // 延迟执行, [异步操作]
+            // setTimeout(() => {
+            //   this.props.counterActions.increment(10)
+            // }, 1000)
+          }}>Increment</button>
           <button className="btn btn-success" onClick={() => {this.props.counterActions.decrement(5)}}>Decrement</button>
         </p>
         <User />
