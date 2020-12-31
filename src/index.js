@@ -9,6 +9,8 @@ import { Provider } from "react-redux";
 
 import reduxLogger from "redux-logger";
 
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 // 异步与同步 in lesson 7
 // 最常见的异步: 定时器, 网络请求 [counter--->定时器, user--->网络请求]
 import reduxThunk from "redux-thunk"
@@ -51,7 +53,7 @@ import reduxThunk from "redux-thunk"
 // Note:
 // 一般情况下, 我们是没有必要自己定义中间件, 常用的中间件, 基本都有实现
 // 使用第三方中间件 redux-logger
-const store = createStore(rootReducer, {}, applyMiddleware(reduxLogger, reduxThunk));
+const store = createStore(rootReducer, {}, composeWithDevTools(applyMiddleware(reduxLogger, reduxThunk)));
 // 监听store数据变化
 // store.subscribe(() => {
 //   console.log("state: ", store.getState());

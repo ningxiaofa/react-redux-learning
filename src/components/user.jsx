@@ -6,11 +6,9 @@ import * as userActions from "../actions/user";
 class User extends React.Component {
     render() {
         const { user, userActions } = this.props;
-        console.log(user);
         const { isFetching, data, error } = user;
         let ret;
         if (isFetching) {
-            console.log(isFetching)
             ret = "loading..."
         } else if (data) {
             ret = data.title

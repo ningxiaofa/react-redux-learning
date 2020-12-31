@@ -19,4 +19,14 @@ Redux:
     react-redux: 为了在react中容易地使用: connect provider
 
     1.安装
-        npm install redux --save  // 简写: npm i redux
+        npm i redux react-redux
+        或者
+        yarn add redux react-redux
+
+    2.调试流程
+        1.chrome浏览器需要安装插件： Redux devTools
+        2.安装依赖, redux-devtools-extension
+        npm i -D redux-devtools-extension 
+        或者
+        yarn add --dev redux-devtools-extension
+        // 详情： https://github.com/zalmoxisus/redux-devtools-extension
